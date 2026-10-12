@@ -16,6 +16,8 @@ function App() {
     { id: uuidv4(), title: "Gaming Mouse", description: "Ergonomic RGB gaming mouse", price: 1800 },
   ];
 
+  
+
   return (
     <>
       <Navbar />

@@ -7,6 +7,7 @@ import { useState } from 'react'
 //     Price: "Price1"
 // })
 
+
 const Card = () => {
   return (
     

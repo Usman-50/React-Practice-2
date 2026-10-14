@@ -10,7 +10,7 @@ const Navbar = () => {
         </div>
         <div className='flex gap-4'>
         <NavLink to="/" className={(e) =>{return e.isActive ? "text-[#FFD700]" : ""}}>Home</NavLink>
-        <NavLink to="/" className={(e) =>{return e.isActive ? "text-[#FFD700]" : ""}}>Cart</NavLink>
+        <NavLink to="/Cart" className={(e) =>{return e.isActive ? "text-[#FFD700]" : ""}}>Cart</NavLink>
         </div>
       </nav>
     </div>

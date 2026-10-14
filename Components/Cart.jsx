@@ -1,8 +1,14 @@
 import React from 'react'
 import Card from './Card'
+import { Routes, Route, useNavigate } from 'react-router-dom';
 
 const Cart = () => {
+  const navigate = useNavigate()
   const cartItems = JSON.parse(localStorage.getItem("cart")) || []
+  const totalPrice = cartItems.reduce((sum , item) =>{
+    return sum + Number(item.price || 0)
+  }, 0)
+  console.log(totalPrice)
   return (
     <>
     <div>
@@ -20,7 +26,7 @@ const Cart = () => {
       ))}
     </div>
     </div>
-    <div className='flex justify-center items-center h-[92.5vh]'>
+    <div className='flex justify-center m-4'>
     <div className='bg-[#0A0A0A] text-white border border-white w-[20%] p-4'>
         <div className='flex justify-center items-center'>
       <h1 className='text-2xl font-bold'>Cart</h1>
@@ -32,13 +38,13 @@ const Cart = () => {
       <p className='text-xl font-bold'>Total : </p>
       </div>
       <div>
-        <p className='text-xl font-bold'>1</p>
-        <p className='text-xl font-bold'>100</p>
-        <p className='text-xl font-bold'>1000</p>
+        <p className='text-xl font-bold'>{cartItems.length}</p>
+        <p className='text-xl font-bold'>{totalPrice}</p>
+        <p className='text-xl font-bold'>{totalPrice}</p>
       </div>
       </div>
       <div className='flex justify-center items-center'>
-        <button className='text-xl font-bold bg-gray-900 px-2 py-4 rounded text-white cursor-pointer mt-4'>Check Out</button>
+        <button onClick={() => navigate("/Form")} className='text-xl font-bold bg-gray-900 px-2 py-4 rounded text-white cursor-pointer mt-4'>Check Out</button>
       </div>
     </div>
     </div>

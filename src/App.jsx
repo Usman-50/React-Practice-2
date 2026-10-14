@@ -8,6 +8,7 @@ import Card from '../Components/Card'
 import Cart from '../Components/Cart'
 import { v4 as uuidv4 } from 'uuid';
 import { createBrowserRouter , RouterProvider } from 'react-router-dom';
+import Form from '../Components/Form'
 
 const products = [
   { id: uuidv4(), title: "Headphones", description: "Wireless Bluetooth headphones", price: 4500 },
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
     <Cart />
     </>
     )
+  },
+  {
+    path: "/Form",
+    element: <Form />
   }
 ]
 )

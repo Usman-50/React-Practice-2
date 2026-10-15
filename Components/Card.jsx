@@ -5,6 +5,14 @@ const Card = ({ id, title, description, price, isCartPage, index }) => {
 
   const handleAdd = () => {
     let currentCart = JSON.parse(localStorage.getItem("cart")) || []
+    const isAlreadyInCart = currentCart.some((item) =>{
+      return item.id == id
+    })
+    console.log(id)
+    if (isAlreadyInCart) {
+      alert(`${title} pehlay se cart mein majood hai!`);
+      return;
+    }
     const newProduct = {
       id: id,
       title: title,

@@ -11,10 +11,10 @@ import { createBrowserRouter , RouterProvider } from 'react-router-dom';
 import Form from '../Components/Form'
 
 const products = [
-  { id: uuidv4(), title: "Headphones", description: "Wireless Bluetooth headphones", price: 4500 },
-  { id: uuidv4(), title: "Smart Watch", description: "Fitness tracking watch", price: 7800 },
-  { id: uuidv4(), title: "Keyboard", description: "Mechanical gaming keyboard", price: 3200 },
-  { id: uuidv4(), title: "Gaming Mouse", description: "Ergonomic RGB gaming mouse", price: 1800 },
+  { id: 1, title: "Headphones", description: "Wireless Bluetooth headphones", price: 4500 },
+  { id: 2, title: "Smart Watch", description: "Fitness tracking watch", price: 7800 },
+  { id: 3, title: "Keyboard", description: "Mechanical gaming keyboard", price: 3200 },
+  { id: 4, title: "Gaming Mouse", description: "Ergonomic RGB gaming mouse", price: 1800 },
 ];
 
 const Home = () =>{
